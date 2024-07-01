@@ -1,0 +1,191 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: bisque
+}
+
+.header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.navbar {
+    background-color: #fff; /* Navbar arka plan rengi */
+    border-bottom: 1px solid #ddd; /* Alt çizgi */
+    padding: 10px 0; /* Navbar içi boşluk */
+    text-align: center; /* Metin hizalaması */
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: inline-block;
+    margin-right: 20px; /* Menü öğeleri arası boşluk */
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #333; /* Menü link rengi */
+    font-size: 16px; /* Menü yazı boyutu */
+    padding: 10px 15px; /* Menü öğe içi boşluk */
+    display: block;
+}
+
+.menu-item a:hover {
+    color: #c0392b; /* Hover durumu link rengi */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff; /* Dropdown arka plan rengi */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Gölge efekti */
+    z-index: 1;
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu ul li {
+    text-align: left;
+    padding: 10px;
+}
+
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: #333; /* Dropdown link rengi */
+    display: block;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #f9f9f9; /* Hover arka plan rengi */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hero {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+}
+
+
+.hero {
+    background-color: grey;
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Örneğin 768 piksel ve altı için stil tanımı */
+@media (max-width: 768px) {
+    /* Stil tanımları buraya gelecek */
+}

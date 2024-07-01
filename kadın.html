@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kadın</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="kadın.css">
+    <style>
+        /* Stil sayfası yerine burada CSS kodlarını iç içe kullanarak basit özelleştirmeler yapabilirsiniz. */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .product-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+
+<script src="script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9w2kdCynRa4PCxKZaW1b-3EImOjRL7dvTqA&s" alt="Vakko Logo">
+            </div>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="navbar">
+                <ul class="menu">
+                    <li class="menu-item"><a href="erkek.html">Erkek</a></li>
+                    <li class="menu-item"><a href="kadın.html">Kadın</a></li>
+                    <li class="menu-item dropdown">
+                        <a href="#" class="dropdown-toggle">Aksesuarlar</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="Çantalar.html">Çantalar</a></li>
+                                <li><a href="Cüzdan.html">Cüzdan</a></li>
+                                <li><a href="Ayakkabılar.html">Ayakkabılar</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu-item"><a href="sepet.html">Sepet</a></li>
+                    <li class="menu-item"><a href="index.html">Anasayfa</a></li>
+                    <li class="menu-item"><a href="iletişim.html">İletişim</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+    <section class="product-grid container">
+        <div class="product-item">
+            <img src="https://cdn.vakko.com/mnresize/595/892/8683820583681-01.jpg" alt="Product 1">
+            <h3>Ceket</h3>
+            <p>150£</p>
+            <button>Sepete Ekle</button>
+        </div>
+        <div class="product-item">
+            <img src="https://cdn.vakko.com/mnresize/595/892/8683821062550-02.jpg" alt="Product 2">
+            <h3>Pantolon</h3>
+            <p>50£</p>
+            <button>Sepete Ekle</button>
+        </div>
+        <div class="product-item">
+            <img src="https://cdn.vakko.com/mnresize/595/892/8683820452154-01.jpg" alt="Product 3">
+            <h3>Elbise</h3>
+            <p>200£</p>
+            <button>Sepete Ekle</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Vakko. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('dropdownMenu');
+            menu.classList.toggle('active');
+            
+            var hamburger = document.querySelector('.hamburger-menu');
+            hamburger.classList.toggle('active');
+        }
+    </script>
+
+    <script src="bootstrap.min.js"></script>
+    <script src="bootstrap.bundle.js"></script>
+    
+</body>
+</html>

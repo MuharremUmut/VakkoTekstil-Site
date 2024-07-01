@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sepet</title>
+    <link rel="stylesheet" href="sepet.css">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .product-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .product-list li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9w2kdCynRa4PCxKZaW1b-3EImOjRL7dvTqA&s" alt="Vakko Logo">
+            </div>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="navbar">
+                <ul class="menu">
+                    <li class="menu-item"><a href="erkek.html">Erkek</a></li>
+                    <li class="menu-item"><a href="kadın.html">Kadın</a></li>
+                    <li class="menu-item dropdown">
+                        <a href="#" class="dropdown-toggle">Aksesuarlar</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="Çantalar.html">Çantalar</a></li>
+                                <li><a href="Cüzdan.html">Cüzdan</a></li>
+                                <li><a href="Ayakkabılar.html">Ayakkabılar</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu-item"><a href="sepet.html">Sepet</a></li>
+                    <li class="menu-item"><a href="index.html">Anasayfa</a></li>
+                    <li class="menu-item"><a href="iletişim.html">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2>Sepetinizdeki Ürünler</h2>
+        <ul class="product-list" id="productList">
+            <!-- Sepete JavaScript ile eklenen ürünler burada listelenecek -->
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Vakko. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

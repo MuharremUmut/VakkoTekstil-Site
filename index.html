@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vakko</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9w2kdCynRa4PCxKZaW1b-3EImOjRL7dvTqA&s" alt="Vakko Logo">
+            </div>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="navbar">
+                <ul class="menu">
+                    <li class="menu-item"><a href="erkek.html">Erkek</a></li>
+                    <li class="menu-item"><a href="kadın.html">Kadın</a></li>
+                    <li class="menu-item dropdown">
+                        <a href="#" class="dropdown-toggle">Aksesuarlar</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="Çantalar.html">Çantalar</a></li>
+                                <li><a href="Cüzdan.html">Cüzdan</a></li>
+                                <li><a href="Ayakkabılar.html">Ayakkabılar</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu-item"><a href="sepet.html">Sepet</a></li>
+                    <li class="menu-item"><a href="index.html">Anasayfa</a></li>
+                    <li class="menu-item"><a href="iletişim.html">İletişim</a></li>
+                </ul>
+            </nav>
+            
+    </header>
+    
+
+    <section class="hero">
+        <div class="container">
+            <h1>Kalite ve Şıklığın Adresi</h1>
+            <p>Vakko ile modayı yakalayın</p>
+        </div>
+    </section>
+
+    <section class="slider">
+        <div class="slides">
+            <div class="slide active" style="background-image: url('https://mdsassets.emaarmalls.com/mds/uploads/store/mainPicture/65fc3533648b3.jpg');"></div>
+            <div class="slide" style="background-image: url('https://cdn.vakko.com/banners/55b6d56c-1c39-41d3-874a-fd1797bc3a80.jpeg');"></div>
+            <div class="slide" style="background-image: url('https://mdsassets.emaarmalls.com/mds//uploads/offer/mainPicture/6237429dd9cc8.jpg');"></div>
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Vakko. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            slides.forEach((slide, i) => {
+                slide.style.display = i === currentSlide ? 'block' : 'none';
+            });
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentSlide);
+        });
+    </script>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('dropdownMenu');
+            menu.classList.toggle('active');
+            
+            var hamburger = document.querySelector('.hamburger-menu');
+            hamburger.classList.toggle('active');
+        }
+    </script>
+
+    <script src="bootstrap.min.js"></script>
+    <script src="bootstrap.bundle.js"></script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
+    <link rel="stylesheet" href="iletişim.css">
+    <style>
+        /* Genel sayfa stili */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9w2kdCynRa4PCxKZaW1b-3EImOjRL7dvTqA&s" alt="Vakko Logo">
+            </div>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="navbar">
+                <ul class="menu">
+                    <li class="menu-item"><a href="erkek.html">Erkek</a></li>
+                    <li class="menu-item"><a href="kadın.html">Kadın</a></li>
+                    <li class="menu-item dropdown">
+                        <a href="#" class="dropdown-toggle">Aksesuarlar</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="Çantalar.html">Çantalar</a></li>
+                                <li><a href="Cüzdan.html">Cüzdan</a></li>
+                                <li><a href="Ayakkabılar.html">Ayakkabılar</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu-item"><a href="sepet.html">Sepet</a></li>
+                    <li class="menu-item"><a href="index.html">Anasayfa</a></li>
+                    <li class="menu-item"><a href="iletişim.html">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>İletişim Formu</h2>
+        <form id="contactForm" action="submit_form.php" method="POST">
+            <label for="fname">Adınız</label>
+            <input type="text" id="fname" name="fname" placeholder="Adınızı girin.." required>
+
+            <label for="lname">Soyadınız</label>
+            <input type="text" id="lname" name="lname" placeholder="Soyadınızı girin.." required>
+
+            <label for="email">E-posta</label>
+            <input type="text" id="email" name="email" placeholder="E-posta adresinizi girin.." required>
+
+            <label for="message">Mesajınız</label>
+            <textarea id="message" name="message" placeholder="Mesajınızı girin.." required></textarea>
+
+            <input type="submit" value="Gönder">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            // Formun varsayılan davranışını engelle
+            event.preventDefault();
+
+            // Form verilerini işleme gönder
+            var formData = new FormData(this);
+
+            // Formu sunucuya göndermek için gerekli işlemler burada yapılabilir
+            // Örneğin, fetch API veya XMLHttpRequest kullanılabilir
+
+            // İşleme gönderildikten sonra index.html sayfasına yönlendir
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>
